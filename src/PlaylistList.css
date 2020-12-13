@@ -1,0 +1,46 @@
+.playlist-list-rows {
+  height: 100px;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px 5px;
+}
+
+.playlist-list-rows:hover {
+  background-color: rgb(30, 180, 61);
+}
+
+.playlist-img {
+  height: 100px;
+  width: 100px;
+  float: left;
+  padding-left: 5px
+}
+
+.playlist-header {
+  margin-left: 110px;
+}
+
+.description {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 2.6em;
+  width: 99%
+}
+.playlist-list-rows p {
+  margin: 0px;
+}
+
+h2 {
+  margin: 0px 5px 0px;
+}
+
+.title {
+  height: 1.5em;
+  width: 100%;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
