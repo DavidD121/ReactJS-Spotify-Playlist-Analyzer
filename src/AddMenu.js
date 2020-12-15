@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { useSpring, animated } from 'react-spring';
-import placeholder from './placeholder.png';
+import placeholder from './images/placeholder.png';
 import './AddMenu.css';
 
 const spotifyApi = new SpotifyWebApi();
@@ -51,15 +51,15 @@ function AddMenu({ playlist, features, genres, tracks, update, audio}) {
 
         newQuery.seed_tracks = getRandomTrackId() + "," + getRandomTrackId() + "," + getRandomTrackId();
 
-        console.log(newQuery);
+        //console.log(newQuery);
 
         spotifyApi.getRecommendations(newQuery).then(
             function (data) {
-                console.log(data);
+                //console.log(data);
                 setFoundTracks(data.tracks.filter(track => !currentSongs.includes(track.uri)));
             },
             function(err){
-                console.log(err);
+                //console.log(err);
             }
         )
     }
@@ -74,7 +74,7 @@ function AddMenu({ playlist, features, genres, tracks, update, audio}) {
     }
 
     function sample(url, id) {
-        console.log(url);
+        //console.log(url);
 
         var results = Array.from(document.getElementsByClassName('track-info'));
 
@@ -99,7 +99,7 @@ function AddMenu({ playlist, features, genres, tracks, update, audio}) {
     }, [addedSongs]);
 
     function displayButton(uri) {
-        console.log(addedSongs)
+        //console.log(addedSongs)
         if(addedSongs.includes(uri)) {
             return <div className='added'>&#x2714;</div>
         } else {
@@ -110,11 +110,11 @@ function AddMenu({ playlist, features, genres, tracks, update, audio}) {
     function addSong(uri) {
         spotifyApi.addTracksToPlaylist(playlist.id, [uri]).then(
             function(data) {
-                console.log(data);
+                //console.log(data);
                 setAddedSongs(addedSongs.concat([uri]));
             },
             function(err) {
-                console.log(err)
+                //console.log(err)
             }
         )
     }
@@ -133,12 +133,7 @@ function AddMenu({ playlist, features, genres, tracks, update, audio}) {
             <div className='search-results'>
                 {foundTracks.map(track => (
                     <div className='result'>
-                        <div className='track-info' id={track.id} onClick={() => sample(track.preview_url, track.id)}>
-                            <img className='preview-image' src={getImage(track.album.images)}></img>
-                            <div className='preview-name'>{track ? track.name : ""}</div>
-                            <div className='preview-artist'>{track ? "by " + track.artists[0].name : ""}</div>
-                            {track.preview_url ? '' : 'preview unavailable'}
-                        </div>
+                        <iframe src={"https://open.spotify.com/embed/track/" + track.id} className="track-info" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         <div className='add-track'>
                             {displayButton(track.uri)}
                         </div>

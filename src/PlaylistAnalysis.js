@@ -3,7 +3,7 @@ import './PlaylistAnalysis.css';
 import AvgBar from './AvgBar.js';
 import AddMenu from './AddMenu.js';
 import SpotifyWebApi from 'spotify-web-api-js';
-import placeholder from './placeholder.png';
+import placeholder from './images/placeholder.png';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Playlist from './Playlist';
 
@@ -21,7 +21,7 @@ function PlaylistAnalysis({ match }) {
   function update() {
     spotifyApi.getPlaylist(PlaylistID).then(
       function (data) {
-        console.log(data);
+        //console.log(data);
         setPlaylist(data);
         getPlaylistItems(data);
       }
@@ -37,7 +37,7 @@ function PlaylistAnalysis({ match }) {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    console.log(playlistItems);
+    //console.log(playlistItems);
     getGenres();
   }, [playlistItems]);
 
@@ -199,7 +199,7 @@ function PlaylistAnalysis({ match }) {
 
   return (
     <div>
-      <Link to="/"> back </Link>
+      <Link className="link" to="/"> Back </Link>
       <div className='flex'>
         <div className="info">
           <img src={getImage()} className='image' />
@@ -208,7 +208,7 @@ function PlaylistAnalysis({ match }) {
             <div className='bottom'>
               <div className="sub-header">
                 <h3>by {playlist.owner.display_name}</h3>
-                <h4>{playlist.tracks.total} songs <br/> {getPlaylistLength()}</h4>
+                <h4>{playlist.tracks.total} songs <br/> {getPlaylistLength()}</h4>  
               </div>
               <div className='genre'>
                 <h3>Genres:</h3>

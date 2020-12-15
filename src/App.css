@@ -1,5 +1,4 @@
 body {
-  height: 100vh;
   background-color: rgb(30,30,30);
   color: White;
 }
@@ -19,7 +18,7 @@ a {
 }
 
 .welcome {
-  width: 40%;
+  width: 50%;
   margin: 17px;
   font-size: large;
 }
@@ -50,6 +49,19 @@ a {
 .button:hover {
   background-color: rgb(30, 140, 61);
   cursor: pointer;
+}
+
+.aboutlink {
+  height: 30px;
+  width: 72px;
+  position: absolute;
+  top: 160px;
+  right: 10px;
+}
+
+.link {
+  font-size: large;
+  text-decoration: underline;
 }
 
 .list-flex {
@@ -87,4 +99,10 @@ a {
 .about-button {
   position: absolute;
   top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .welcome {
+    font-size: medium;
+  }
 }

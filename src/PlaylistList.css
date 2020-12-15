@@ -27,8 +27,9 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   height: 2.6em;
-  width: 99%
+  width: 99%;
 }
+
 .playlist-list-rows p {
   margin: 0px;
 }
@@ -43,4 +44,21 @@ h2 {
   overflow:hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 600px) {
+  .welcome {
+    font-size: medium;
+  }
+
+  .title {
+    font-size: medium;
+  }
+
+  .description {
+    font-size: medium;
+  }
+  .sub-head {
+    font-size: medium;
+  }
 }

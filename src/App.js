@@ -5,13 +5,20 @@ import Playlist from './Playlist.js';
 import PlaylistAnalysis from './PlaylistAnalysis.js';
 import About from './About.js';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {fs} from 'fs';
 
 export const authEndpoint = 'https://accounts.spotify.com/authorize?';
-var client_id = 'e5b02384340a479a9e35f3279285bfcb';
-var client_secret = 'c8a9d7c2a1c34ac08825eda1c8fdd2f2';
+var client_id = 'e6aea1388e1341a9b5984a63e07f9e4a';
+var client_secret = '';
 var redirect_uri = 'http://localhost:3000/';
-//var redirect_uri = 'http://localhost:3000/';
+//var redirect_uri = 'http://www.playlistanalyser.com';
 var scopes = ['user-read-private', 'playlist-read-private', 'playlist-modify-public', 'playlist-modify-private', 'playlist-read-collaborative'];
+
+//getting secret from secret file
+fetch('secret.txt')
+  .then(response => response.text())
+  .then(text => client_secret = text);
+
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -21,6 +28,7 @@ async function setToken(token) {
   await spotifyApi.setAccessToken(token);
 }
 
+//Getting access token from URL
 const hash = window.location.hash
   .substring(1)
   .split("&")
@@ -32,11 +40,10 @@ const hash = window.location.hash
     return initial;
   }, {});
 
-
-
+//Setting access token if successfullly obtained
 if (hash.access_token) {
   setToken(hash.access_token);
-  console.log("token");
+  //console.log("token");
   initialLoggedIn = true;
   //window.location = ""
 }
@@ -47,15 +54,11 @@ function App() {
   return (
     <div className="App">
 
-
-
       <Router>
         <Switch>
           <Route path='/' exact component={PlaylistList} />
           <Route path='/about' component={About} />
           <Route path='/playlist/:id' component={PlaylistAnalysis} />
-          
-
         </Switch>
       </Router>
 
@@ -75,7 +78,7 @@ function PlaylistList() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    console.log(userPlaylists);
+    //console.log(userPlaylists);
   }, [userPlaylists]);
 
   async function getAllPlaylists() {
@@ -87,7 +90,7 @@ function PlaylistList() {
       await spotifyApi.getUserPlaylists({ limit: lim, offset: acc * lim }).then(
         function (data) {
           if (data.items.length != 0) {
-            console.log(data.items);
+            //console.log(data.items);
             arr = arr.concat(data.items);
             acc++;
           } else {
@@ -96,7 +99,6 @@ function PlaylistList() {
         }
       );
     }
-
     setUserPlaylists(arr);
   }
 
@@ -104,7 +106,7 @@ function PlaylistList() {
   useEffect(() => {
     spotifyApi.getMe().then(
       function (data) {
-        console.log(data);
+        //console.log(data);
         setUsername(data.display_name);
       }
     );
@@ -118,10 +120,9 @@ function PlaylistList() {
       <div className='navbar'>
 
         <Link to={'/about/'}>
-          <div className='about'>
-            about
+          <div className='aboutlink link'>
+            About
           </div>
-
         </Link>
         <a href={`${authEndpoint}client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`} className='button login'> <div className='login-text'>Login</div> </a>
         <div className='welcome'>

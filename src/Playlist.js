@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './PlaylistList.css';
 import SpotifyWebApi from 'spotify-web-api-js';
-import placeholder from './placeholder.png';
+import placeholder from './images/placeholder.png';
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -43,7 +43,7 @@ function Playlist({playlist}) {
         <div className='playlist-header'>
           <h2 className='title'>{playlist.name}</h2>
           <p className='description'>{getDescription()}</p>
-          <p>by {playlist.owner.display_name} | {playlist.tracks.total} songs</p>
+          <p className="sub-head">by {playlist.owner.display_name} | {playlist.tracks.total} songs</p>
         </div>
 
       </div>

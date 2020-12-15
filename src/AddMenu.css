@@ -67,29 +67,8 @@
     overflow: hidden;
 }
 
-
-.preview-image {
-    float: left;
-    height: 100%;
-    margin-right: 5px;
-    overflow: hidden;
-}
-
-.preview-name {
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    height: 2.6em;
-}
-
-.preview-artist {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .result {
-    height: calc(20% - 5px);
+    height: calc(14.2857142857% - 5px);
     width: 100%;
     text-align: left;
     padding-bottom: 5px;
@@ -100,22 +79,14 @@
     width: calc(100% - 50px);
 }
 
-.track-info:hover {
-    background-color: rgb(30, 180, 61);
-}
 
 .playing {
     background-color: rgb(30, 150, 61);
 }
 
-.preview-status {
-    position: absolute;
-    right: 100px;
-}
-
 .add-track {
     position: relative;
-    bottom:65%;
+    top: 35%;
     height: 30%;
     width: 32px;
     float: right;
@@ -170,7 +141,7 @@
 
     @media screen and (max-height: 600px) {
         .result {
-            height: calc(33.4% - 5px);
+            height: calc(25% - 5px);
         }
     }
 
