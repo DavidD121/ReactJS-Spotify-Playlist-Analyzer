@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ad0a5bb6e9b002e6228ef65e2ddc8d09",
+    "revision": "699310923c65b44f4ab05e5d3b073df4",
     "url": "/ReactJS-Spotify-Playlist-Analyzer/index.html"
   },
   {
-    "revision": "ded0d6e35666997a1646",
-    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/css/main.f3e89206.chunk.css"
+    "revision": "5b35ee7da4604923e6bd",
+    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/css/main.44e58bf9.chunk.css"
   },
   {
-    "revision": "b0613d53d04e36b6b1f5",
-    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.5c47601b.chunk.js"
+    "revision": "5d4c627af3f9f4b79776",
+    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.1a592de1.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.5c47601b.chunk.js.LICENSE.txt"
+    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.1a592de1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ded0d6e35666997a1646",
-    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/js/main.aeb465bc.chunk.js"
+    "revision": "5b35ee7da4604923e6bd",
+    "url": "/ReactJS-Spotify-Playlist-Analyzer/static/js/main.adf0668e.chunk.js"
   },
   {
     "revision": "e1aac5ab41b3daa9334a",

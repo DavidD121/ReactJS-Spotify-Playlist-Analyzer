@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ReactJS-Spotify-Playlist-Analyzer/static/css/main.f3e89206.chunk.css",
-    "main.js": "/ReactJS-Spotify-Playlist-Analyzer/static/js/main.aeb465bc.chunk.js",
-    "main.js.map": "/ReactJS-Spotify-Playlist-Analyzer/static/js/main.aeb465bc.chunk.js.map",
+    "main.css": "/ReactJS-Spotify-Playlist-Analyzer/static/css/main.44e58bf9.chunk.css",
+    "main.js": "/ReactJS-Spotify-Playlist-Analyzer/static/js/main.adf0668e.chunk.js",
+    "main.js.map": "/ReactJS-Spotify-Playlist-Analyzer/static/js/main.adf0668e.chunk.js.map",
     "runtime-main.js": "/ReactJS-Spotify-Playlist-Analyzer/static/js/runtime-main.4981d367.js",
     "runtime-main.js.map": "/ReactJS-Spotify-Playlist-Analyzer/static/js/runtime-main.4981d367.js.map",
-    "static/js/2.5c47601b.chunk.js": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.5c47601b.chunk.js",
-    "static/js/2.5c47601b.chunk.js.map": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.5c47601b.chunk.js.map",
+    "static/js/2.1a592de1.chunk.js": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.1a592de1.chunk.js",
+    "static/js/2.1a592de1.chunk.js.map": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.1a592de1.chunk.js.map",
     "index.html": "/ReactJS-Spotify-Playlist-Analyzer/index.html",
-    "precache-manifest.ebe2fd85e4181ca090e5eaac686ccaa5.js": "/ReactJS-Spotify-Playlist-Analyzer/precache-manifest.ebe2fd85e4181ca090e5eaac686ccaa5.js",
+    "precache-manifest.f117c1190982585cec82d591aad22c06.js": "/ReactJS-Spotify-Playlist-Analyzer/precache-manifest.f117c1190982585cec82d591aad22c06.js",
     "service-worker.js": "/ReactJS-Spotify-Playlist-Analyzer/service-worker.js",
-    "static/css/main.f3e89206.chunk.css.map": "/ReactJS-Spotify-Playlist-Analyzer/static/css/main.f3e89206.chunk.css.map",
-    "static/js/2.5c47601b.chunk.js.LICENSE.txt": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.5c47601b.chunk.js.LICENSE.txt",
+    "static/css/main.44e58bf9.chunk.css.map": "/ReactJS-Spotify-Playlist-Analyzer/static/css/main.44e58bf9.chunk.css.map",
+    "static/js/2.1a592de1.chunk.js.LICENSE.txt": "/ReactJS-Spotify-Playlist-Analyzer/static/js/2.1a592de1.chunk.js.LICENSE.txt",
     "static/media/placeholder.png": "/ReactJS-Spotify-Playlist-Analyzer/static/media/placeholder.070e65fb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4981d367.js",
-    "static/js/2.5c47601b.chunk.js",
-    "static/css/main.f3e89206.chunk.css",
-    "static/js/main.aeb465bc.chunk.js"
+    "static/js/2.1a592de1.chunk.js",
+    "static/css/main.44e58bf9.chunk.css",
+    "static/js/main.adf0668e.chunk.js"
   ]
 }
