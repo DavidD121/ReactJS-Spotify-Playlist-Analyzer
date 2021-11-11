@@ -178,8 +178,17 @@
         bottom: 10px;
     }
 
-    .result {
-        height: calc(33.4% - 5px);
+    @media screen and (min-height: 900px) {
+        .result {
+            height: calc(25% - 5px);
+        }
     }
+
+    @media screen and (max-height: 900px) {
+        .result {
+            height: calc(33.4% - 5px);
+        }
+    }
+    
 }
 

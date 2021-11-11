@@ -101,7 +101,7 @@ h4 {
     font-size: 30px;
     margin-bottom: 10px;
   }
-  
+
   h3 {
     font-size: 15px;
   }
@@ -130,16 +130,14 @@ h4 {
   .song-names {
     width: 40%;
   }
-  
+
   .artists {
     width: 0;
     visibility: hidden;
   }
 }
 
-
 @media screen and (min-width: 1001px) {
-
   .bars {
     position: absolute;
     right: 10px;
@@ -154,7 +152,6 @@ h4 {
   .image {
     width: 40%;
   }
-
 
   .bars {
     width: 100%;
@@ -180,6 +177,7 @@ h4 {
 .addSongs {
   height: 50px;
   padding: 0 10px 0;
+  font-size: large;
 }
 
 .songs-text {
@@ -236,7 +234,6 @@ h4 {
 thead tr {
   background-color: rgb(50, 50, 50);
   position: relative;
-  
 }
 
 @media screen and (min-width: 601px) {

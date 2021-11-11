@@ -11,9 +11,9 @@ function About() {
       <Link className="link" to="/"> Back </Link>
       <h1>About</h1>
       <div className="about-description">
-        A website to analyse Spotify playlists and find new songs for them made by a bored college student
+        A website to analyse Spotify playlists and find new songs for them made by a bored college student.
         <br/><br/> 
-        Spotify stores attributes such as dancablity, energy, etc. for each song, this website simply takes
+        Spotify stores attributes such as danceablity, energy, etc. for each song, this website simply takes
         these values from Spotify and displays them in an accessable manner. I've found that these values can 
         be wildly inaccurate i.e Jigsaw Falling Into Place by Radiohead has a .81, maximum being 1, in positivity?!?!? 
         But averaged out in a large enough playlist they work to a degree. What I'm trying to say here is, if this 
